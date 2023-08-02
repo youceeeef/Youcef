@@ -1,0 +1,790 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+/* ---------- GLOBAL STYLING ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-family: "Source Code Pro", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 64px;
+  color: #fefefe;
+}
+
+
+.box {
+  
+  width: 500px; /* Adjust the width to your desired value */
+  height: 150px; /* Adjust the height to your desired value */
+}
+
+body {
+  width: 100%;
+  background-color: #000000;
+}
+
+body::selection {
+  color: #000000;
+  background: #00b840;
+}
+
+.body-part-2 {
+  position: relative;
+  top: -50px;
+}
+
+.background-circle {
+  background: #000000;
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  z-index: 9;
+  box-shadow: 0 0 20px #ffffff;
+}
+
+.hoodie-guy {
+  position: absolute;
+  background: url(assets/Hoodie-guy.png);
+  top: 100px;
+  height: 570px;
+  width: 550px;
+  background-size: cover;
+}
+
+.circle {
+  position: relative;
+  top: 400px;
+  left: 220px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: animateCircle 40s linear infinite;
+}
+
+@keyframes animateCircle {
+  0% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+  }
+}
+
+.circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  box-shadow: 0px 0px 5px #ffffff;
+  border-radius: 50%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * calc(360deg / 15))) translateZ(300px);
+}
+
+.circle span img {
+  position: relative;
+  top: 12px;
+  left: 12px;
+  object-fit: cover;
+}
+
+#content-body {
+  display: flex;
+  background-color: #000000;
+  align-items: flex-start;
+  height: 90vh;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 0 0 100px;
+  margin-bottom: 10vh;
+  max-height: 100vh;
+}
+
+.developer-intro {
+  display: flex;
+  align-items: center;
+}
+
+.developer-intro p {
+  padding: 5px 10px;
+  margin: 0 20px 0 0;
+  background-color: rgb(255, 255, 255);
+  color: #2d2e32;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 2.5px;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.developer-intro p:hover {
+  font-weight: 900;
+  background-color: #00b840;
+}
+
+.body-title h1 {
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -1.5px;
+  padding: 35px 0 0 0;
+}
+.body-title h1 span {
+  color: #ffffff;
+}
+
+.body-title p {
+  font-size: 12px;
+  padding: 30px 0;
+  color: #cacaca;
+  font-weight: 500;
+  line-height: 25px;
+
+}
+
+.body-title a {
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.body-tail {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#scroll-down-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#scroll-down-button:hover {
+  color: #64f4ac;
+}
+
+.media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  left: 40px;
+}
+
+.button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+ 
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  width: 200px;
+  
+}
+
+.icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+  color: #000000;
+  
+}
+
+.button:nth-child(1):hover .icon {
+  background: #181717;
+}
+
+.button:nth-child(2):hover .icon {
+  background: #0A66C2;
+}
+
+.button:nth-child(3):hover .icon {
+  background: #D44638;
+}
+
+.button:nth-child(4):hover .icon {
+  background: #833AB4;
+}
+
+.button:nth-child(5):hover .icon {
+  background: #1877F2;
+}
+
+.button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover .icon i {
+  color: #fff;
+  
+}
+
+.button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.button:nth-child(1) span {
+  color: #181717;
+}
+
+.button:nth-child(2) span {
+  color: #0A66C2;
+}
+
+.button:nth-child(3) span {
+  color: #D44638;
+}
+
+.button:nth-child(4) span {
+  color: #833AB4;
+}
+
+.button:nth-child(5) span {
+  color: #1877F2;
+}
+
+.icones {
+  width: 27px;
+}
+
+.about {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #ffffff; /* Add border to create an empty circle */
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+  }
+  
+  .empty-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 2px dashed #ffffff; /* Style the empty circle */
+    border-radius: 50%;
+  }
+  
+  .button-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .about:hover {
+    width: 200px;
+    background-color: #00b840;
+
+  }
+  
+  .about:hover .button-text {
+    opacity: 1;
+  }
+  .body-part-4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Adjust background color as needed */
+    padding: 20px;
+    left: -120px;
+    height: 560px;
+    box-shadow: 0 0 20px rgb(255, 255, 255); /* Add shadow to the container */
+    border-radius: 20px; /* Add border-radius to create rounded corners */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Add this property to center the circles vertically */
+  
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.skill-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px;
+    background: #fdfdfd;
+    overflow: hidden;
+    transform: scale(0);
+    animation: animateScale 0.5s ease-out forwards;
+    box-shadow: 0 0 20px #00b840;
+    margin-left: 20px;
+    animation: animateBorder 1s ease, animateScale 0.5s ease-out forwards;
+}
+
+.skill-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: hsl(0, 0%, 0%);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Liquid filling animation with wavy pattern */
+.skill-circle:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to top, #00b840, transparent);
+    background-size: 100% 10px; /* Adjust the wave height */
+    transform-origin: bottom;
+    animation: fillLiquid 1s ease forwards, waveAnimation 2s linear infinite;
+}
+
+@keyframes fillLiquid {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: var(--percent, 0%);
+    }
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -20px; /* Adjust the wave animation */
+    }
+}
+
+/* Animation duration and easing for the border animation */
+@keyframes animateBorder {
+    0% {
+        border-width: 0;
+    }
+    100% {
+        border-width: 4px;
+    }
+}
+
+/* Animation for scaling the circle */
+@keyframes animateScale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* ----------INTRODUCTION---------- */
+#introduction {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  background-color: #000000;
+  min-height: 95vh;
+  align-items: center;
+}
+
+.cards {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.design-card {
+  max-width: 80%;
+  min-height: 100px;
+  background-color: #000000;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ffffff;
+  transition: 0.5s ease;
+}
+
+.design-card:hover {
+  box-shadow: 0 0 15px #ffffff;
+  cursor: pointer;
+}
+
+.design-card.active {
+  background-color: #00b840;
+  box-shadow:#00b840;
+}
+.design-card.active:hover div{
+color: #fff;
+}
+.design-card.active p {
+  color: #000000;
+  font-weight: 700;
+}
+
+.design-card div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.design-card:hover div {
+  color: #00b840;
+}
+
+.design-card div h3 {
+  font-weight: 500;
+}
+
+.design-card:hover div h3 {
+  font-weight: 600;
+}
+
+.design-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7c7d81;
+}
+
+.design-card a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.design-card:hover a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.introduction-text {
+  display: block;
+  min-width: 50%;
+  padding-right: 175px;
+}
+
+.introduction-text p:nth-child(1) {
+  font-size: 14px;
+  color: #7c7d81;
+  font-weight: 800;
+}
+
+.introduction-text h2 {
+  margin: 20px 0;
+  color: #FFF;
+}
+
+.introduction-text h4 {
+  font-size: 26px;
+  font-style: italic;
+  color: #FFF;
+}
+
+.introduction-text p {
+  font-size: 18px;
+  color: #7c7d81;
+  font-weight: 600;
+}
+/* Add this to your styles.css file */
+.introduction-text {
+  opacity: 0;
+  transform: translateY(50px); /* Initially slide down by 50px */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.introduction-text.slide-in {
+  opacity: 1;
+  transform: translateY(0); /* Slide in by resetting translateY to 0 */
+}
+
+.introduction-text.slide-out {
+  opacity: 0;
+  transform: translateY(50px); /* Slide out by moving 50px down */
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  padding: 100px;
+  background-color: #000000;
+  height: 100vh;
+}
+
+.footer-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-left h2 {
+  color: #FFF;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-left h2 a {
+  color: #00b840;
+  text-underline-offset: 8px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 80%;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 60px 25% 40px 20px;
+  border: 1px solid #2d2e3240;
+  background-color: #2d2e3273;
+  box-shadow: 0 0 10px 1px #ffffff;
+  backdrop-filter: blur(15px);
+  background-image: url(assets/email-background.png);
+  background-size: cover;
+}
+
+.email-form h2 {
+  font-size: 30px;
+  letter-spacing: -1.5px;
+}
+
+.email-form h2 span {
+  font-weight: 600;
+  color: #00b840;
+}
+
+.email-form input {
+  height: 36px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  padding: 4px 8px;
+}
+
+.email-form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email-form div input {
+  width: 90%;
+}
+
+.email-form div button {
+  height: 36px;
+  width: 30%;
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #00b840;
+  cursor: pointer;
+  color: #25262a;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.email-form div button:hover {
+  background-color: #45A877;
+}
+
+.title-first-name,
+.title-last-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+}
+
+.title-first-name {
+  color: #7c7d81; /* White color for MAMMAR-KOUADRI */
+  margin-left: -150px;
+}
+
+.title-last-name {
+  color: #FFF; /* Custom color for Youcef */
+}
+
+/* Add some spacing between the first name and last name */
+.footer-title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* To align them vertically */
+  gap: 8px; /* Adjust the gap as per your preference */
+
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 185px 0 15px 0;
+}
+
+.footer-email-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-email-intro p {
+  font-size: 12px;
+  color: #7c7d81;
+  font-weight: 600;
+}
+
+.footer-email-intro h6 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #7C7D81;
+  margin-top: 10px;
+}
+
+.footer-email-intro h3 {
+  font-size: 26px;
+  color: #FFF;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.cv-download p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  color: #7C7D81;
+}
+.about_button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-out;
+  margin-left: 150px;
+}
+
+.about_button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease-out;
+}
+
+.about_button:hover {
+  background-color: #00b840;
+}
+
+.about_button:hover a {
+  color: #fff;
+}
+
+.social-icons{
+  margin-left: 500px;
+  margin-bottom: -100px;
+}
+.social-icons a {
+  text-decoration: none;
+ 
+}
+
+.social-icons a i {
+  color: #FFF;
+  margin: 0 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons a:nth-child(1) i:hover {
+  color: #0072b1;
+}
+
+.social-icons a:nth-child(3) i:hover {
+  color: #ea4335;
+}
+
+.social-icons a:nth-child(4) i:hover {
+  color: #00acee;
+}
+
+.social-icons a:nth-child(5) i:hover {
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.social-icons a:nth-child(6) i:hover {
+  color: #3b5998;
+}
+
