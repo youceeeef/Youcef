@@ -38,7 +38,7 @@ body::selection {
 }
 .developer-intro,
 .body-title {
-    animation: fadeOut 1s forwards;
+    animation: fadeIn 1s forwards;
 }
 
 /* Apply this to the subsequent content */
