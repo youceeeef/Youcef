@@ -39,23 +39,16 @@ body::selection {
 .developer-intro,
 .body-title {
     animation: fadeIn 1s forwards;
+    
 }
 
-/* Apply this to the subsequent content */
+
 .body-part-2,
 #introduction {
     animation: fadeIn 1s forwards;
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
+
 
 @keyframes fadeIn {
     0% {
