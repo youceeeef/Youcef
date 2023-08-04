@@ -687,6 +687,7 @@ color: #fff;
 .title-last-name {
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
+  margin-top: -300px;
 }
 
 .title-first-name {
@@ -711,12 +712,13 @@ color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 185px 0 15px 0;
+  padding: 85px 0 15px 0;
 }
 
 .footer-email-intro {
   display: flex;
   flex-direction: column;
+  margin-top: 10;
 }
 
 .footer-email-intro p {
